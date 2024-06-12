@@ -1,0 +1,8 @@
+cd      : digunakan untuk berpindah ke folder lain
+ls      : melihat isi folder
+pwd     : menampilkan path folder dimana saat ini
+cp      : untuk menyalin file dari satu lokasi ke lokasi lain
+mv      : untuk memindahkan sebuah file dari satu folder ke folder lain
+rm      : untuk menghapus sebuah file   
+grep    : untuk mencari sebuah string atau teks tertentu didalam file
+cat     : untuk melihat keseluruhan isi file
