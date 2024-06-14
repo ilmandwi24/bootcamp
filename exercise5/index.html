@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        
+        <header class="header">
+                <div class="header-title">
+                    <h1 style="font-size: 24px;">Calc</h1>
+                </div>
+                <div class="header-theme">
+                   <div class="header-theme-font">
+                    THEME
+                   </div>
+                   <div class="header-theme-container">
+
+                       <div class="header-theme-label">
+                           <span>1</span>
+                           <span>2</span>
+                           <span>3</span>
+   
+                       </div>
+                       <input type="range" name="points"  min="1" step="1" id="ubahTema" max="3" value="1">
+                   </div>
+                </div>
+        </header>
+        <section class="tampilan-angka" id="nilai">0</section>
+        <section class="keypad">
+            <!-- button kalkulator -->
+      
+                <div id="tujuh">
+                    7
+                </div>
+                <div id="delapan">
+                    8
+                </div>
+                <div id="sembilan">
+                    9
+                </div>
+                <div class="dark-blue-toggle" id="del">
+                    DEL
+                </div>
+                <div id="empat">
+                    4
+                </div>
+                <div id="lima">
+                    5
+                </div>
+                <div id="enam">
+                    6
+                </div>
+                <div id="tambah">
+                    +
+                </div>
+                <div id="satu">
+                    1
+                </div>
+                <div id="dua">
+                    2
+                </div>
+                <div id="tiga">
+                    3
+                </div>
+                <div id="kurang">
+                    -
+                </div>
+                <div id="koma">
+                    .
+                </div>
+                <div id="nol">
+                    0
+                </div>
+                <div id="bagi">
+                    /
+                </div>
+                <div id="kali">
+                    x
+                </div>
+                <div class="keypad-reset dark-blue-toggle" id="reset">
+                    Reset
+                </div>
+                <div class="keypad-samadengan red-toggle" id="hasil" >
+                    =
+                </div>
+             
+        </section>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
