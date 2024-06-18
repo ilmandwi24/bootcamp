@@ -61,7 +61,7 @@ table {
     --font-color: #000000;
   }
 
-   .theme-three{
+  .theme-three{
     --main-background: hsl(268, 75%, 9%);
     --color-primary: #0060df;
     --color-secondary: #fbfbfe;
@@ -212,3 +212,5 @@ color: hsl(221, 14%, 31%);
     border-color: hsl(224, 28%, 35%) !important;
     color: white !important;
 }
+
+/* ubah */
