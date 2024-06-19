@@ -49,24 +49,58 @@ table {
 
 /* VAR CSS */
 
-    :root {
+    .theme-one{
     --main-background:  hsl(222, 26%, 31%);
+    --toggle-keypad-background:  hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);
+
+    --main-key-background:hsl(30, 25%, 89%);
+    --main-key-shadow:var(--main-key-shadow);
+    --secondary-key-background:hsl(225, 21%, 49%);
+    --secondary-key-shadow:hsl(224, 28%, 35%);
+    --tertiary-key-background:hsl(6, 63%, 50%);
+    --tertiary-key-shadow:hsl(6, 70%, 34%);
+
+    --text-white:hsl(0, 0%, 100%);
+    --text-primary: hsl(221, 14%, 31%);
+    --head-text-primary: hsl(0, 0%, 100%);
+    /* --text-secondary: var(--text-secondary); */
+
     }
 
    .theme-two{
-    --main-background: hsl(0, 0%, 90%);
-    --color-primary: #0060df;
-    --color-secondary: #fbfbfe;
-    --color-accent: #fd6f53;
-    --font-color: #000000;
+    --main-background:  hsl(0, 0%, 90%);
+    --toggle-keypad-background:  hsl(0, 5%, 81%);
+    --screen-background:  hsl(0, 0%, 93%);
+
+    --main-key-background: hsl(45, 7%, 89%);
+    --main-key-shadow:hsl(35, 11%, 61%);
+    --secondary-key-background:hsl(185, 42%, 37%);
+    --secondary-key-shadow: hsl(185, 58%, 25%);
+    --tertiary-key-background:hsl(25, 98%, 40%);
+    --tertiary-key-shadow:hsl(25, 99%, 27%);
+
+    --text-white:hsl(0, 0%, 100%);
+    --text-primary: hsl(60, 10%, 19%);
+    /* --text-secondary: var(--text-secondary); */
   }
 
   .theme-three{
-    --main-background: hsl(268, 75%, 9%);
-    --color-primary: #0060df;
-    --color-secondary: #fbfbfe;
-    --color-accent: #fd6f53;
-    --font-color: #000000;
+    --main-background:  hsl(268, 75%, 9%);
+    --toggle-keypad-background:   hsl(268, 71%, 12%);
+    --screen-background:   hsl(268, 71%, 12%);
+
+    --main-key-background: hsl(268, 47%, 21%);
+    --main-key-shadow: hsl(290, 70%, 36%);
+    --secondary-key-background:hsl(281, 89%, 26%);
+    --secondary-key-shadow: hsl(285, 91%, 52%);
+    --tertiary-key-background:hsl(25, 98%, 40%);
+    --tertiary-key-shadow:hsl(25, 99%, 27%);
+
+    --text-white:hsl(0, 0%, 100%);
+    --text-primary: hsl(52, 100%, 62%);
+    /* --text-secondary: var(--text-secondary); */
+
   }
 
 
@@ -76,9 +110,10 @@ input[type="range"] {
   -webkit-appearance: none;
   appearance: none;
   background:  hsl(223, 31%, 20%);
-  border-radius: 7px;
+  border-radius: 10px;
   color: antiquewhite;
   cursor: pointer;
+  padding: 3px;
   
 }
 
@@ -87,7 +122,7 @@ input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
   
-  background-color: hsl(6, 63%, 50%);
+  background-color: var(--tertiary-key-background);
   border-radius: 0.5rem;
   margin: 0;
   height: 1rem;
@@ -102,23 +137,25 @@ body {
   background-color: var(--main-background);
   font-weight: 700;
   font-size: 16px;
-  color:  hsl(0, 0%, 100%);
+  color:  var(--text-primary);
 
 }
 .container {
     display: block;
     max-width: 480px;
-
+    padding: 0 1rem;
     margin: 50px auto;
 }
 
 .header {
-    
+    color:  var(--head-text-primary);
     display: flex;
     justify-content: space-between;
 }
 
 .header-title {
+  font-size: 1.5rem; /* 20px */
+line-height: 1.75rem; /* 28px */
     display: flex;
     align-items: center;
 }
@@ -145,13 +182,20 @@ body {
 }
 .header-theme-label {
     display: flex;
-    justify-content:space-evenly;
+    justify-content:space-around;
     font-size: 18px;
+    /* margin: 0px 10px; */
+    padding: 2px;
+    /* margin: 0 0px; */
+    margin-left:2px ;
+    /* background-color: #fd6f53; */
 }
 
 .tampilan-angka {
+  color:  var(--head-text-primary);
+  line-height: 2rem  ;
     margin: 16px 0;
-    background-color: hsl(224, 36%, 15%);
+    background-color: var(--screen-background);
     padding: 24px;
     font-size: 32px;
     border-radius:7px;
@@ -161,7 +205,7 @@ body {
 
 .keypad {
    
-    background-color:  hsl(223, 31%, 20%);
+    background-color:  var(--toggle-keypad-background);
     display: grid;
      grid-template-columns: repeat(4, 1fr);
     padding: 24px;
@@ -170,13 +214,14 @@ body {
 }
 
 .keypad > div  {
-color: hsl(221, 14%, 31%);
+  color: var(--text-secondary);
   border-radius: 7px;
-  background-color:  hsl(30, 25%, 89%);
+  background-color:  var(--main-key-background);
   text-align: center;
   padding: 12px 0;
   font-size: 32px;
-  border-bottom: 4px solid hsl(28, 16%, 65%) ;
+  /* border: 10px solid black */
+  border-bottom:  4px solid ;
   border-radius: 7px;
 }
 
@@ -202,15 +247,38 @@ color: hsl(221, 14%, 31%);
 }
 
 .red-toggle {
-    background-color: hsl(6, 63%, 50%) !important;
+    background-color: var(--tertiary-key-background) !important;
     border-color: hsl(6, 70%, 34%) !important;
     color: white !important;
 }
 
 .dark-blue-toggle {
-    background-color: hsl(225, 21%, 49%) !important;
-    border-color: hsl(224, 28%, 35%) !important;
+    background-color: var(--secondary-key-background) !important;
+    border-color: var(--secondary-key-shadow) !important;
     color: white !important;
 }
 
-/* ubah */
+/* Media query */
+
+
+
+@media screen and (max-width: 480px) {
+
+  body {
+    font-size: 1rem;
+  }
+
+  .container{
+    margin: 1rem;
+  }
+
+  .header-title {
+    font-size: 2rem
+  }
+  .keypad > div  {
+    color: var(--text-secondary);
+    font-size: 1.25rem; /* 18px */
+
+  }
+   
+}
