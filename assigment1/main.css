@@ -1,0 +1,633 @@
+@import "cssreset.css";
+
+body, html {
+    height: 100%;
+}
+
+html * {
+    font-family: "Open Sans", sans-serif;
+}
+  
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+}
+
+.navigation {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+h1,h2,h3{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+    font-size: 80px ;
+}
+h2 {
+    font-size: 36px ;
+}
+h3 {
+    font-size: 24px ;
+}
+
+.sub-text{
+    font-size: 14px;
+}
+
+.main-button {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/* START FIGMA */
+
+.main-screen {
+    height: 960px;
+    row-gap: 2.1rem;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.3) 20%,
+      rgba(0, 0, 0, 0.3) 80%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("./assets/main-bg.jpg");
+   
+     /* Full height */
+    height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+ 
+  
+}
+
+.main-screen .content-center {
+    align-self: center;  
+}
+
+.main-screen > h1 {
+    margin-top: 85px;
+}
+.main-screen > h3 {
+    margin-top: 24px;
+}
+
+.main-screen > button {
+    justify-content: center;
+	align-self: center;
+    text-transform: uppercase;
+}
+
+.btn-playnow {
+    color: hsla(40, 6%, 10%, 1);
+    line-height: 22px;
+    padding: 10px 52px;
+    font-size: 16px;
+    background: linear-gradient(194.68deg, #FFB548 11.27%, #F3AF34 90.4%);
+    border: 0;
+    border-radius: 2px;
+    font-weight: 700;
+}
+
+.btn-story {
+    position: relative;
+    margin-top: auto;
+    margin-bottom: 40px;
+    font-size: 12px;
+    color: hsla(0, 0%, 100%, 1);
+    background: none;
+    border: 0;
+}
+.btn-story::after{
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Controls distance of arrow from button */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid white; /* Arrow outline color */
+    
+ 
+}
+
+
+header {
+    background: hsla(0, 0%, 0%, 0.5);
+    padding: 0 100px;
+    
+ 
+}
+.navbar {
+   
+    /* background: hsla(0, 0%, 0%, 0.5); */
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    flex-basis: 200px;
+
+}
+.menu {
+    margin-top: 1px;
+    flex-grow: 6;
+    /* background-color: antiquewhite; */
+}
+.menu > ul {
+    display: flex;
+    gap: 75px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 5px;
+    /* background-color: rgb(10, 11, 24); */
+    justify-content: flex-start;
+}
+
+.action {
+    /* text-transform: uppercase !important; */
+    flex-basis: 200px;
+    display: flex;
+    flex-flow: row-reverse;
+    gap: 10px;
+    /* background-color: #FFB548; */
+}
+
+.action > button {
+    color: white;
+    background: none;
+    border: 0;
+}
+
+.about-gallery {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.3) 20%,
+      rgba(0, 0, 0, 0.3) 80%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("./assets/the-games-bg.jpg");
+    /* padding: 100px; */
+    height: 960px;
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.about-gallery .container {
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* color: #F3AF34; */
+}
+
+.gallery-title {
+   
+    margin-top: -52.5px;
+    /* background-color: #F3AF34; */
+    align-items: start;
+    padding-right: 20px;
+}
+
+.gallery-title > h1,h3 {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-weight: 400;
+    
+
+}
+.gallery-title > h1 {
+    font-size: 56px;
+    line-height: 60px;
+
+}
+
+.gallery-title > h3 {
+    line-height: 50px;
+}
+
+.dot {
+    height: 14px;
+    width: 14px;
+    background-color: none;
+    border: 1.31px solid hsla(0, 0%, 100%, 1);
+    border-radius: 50%;
+    display: inline-block;
+}
+.display-gallery {
+    position: relative;
+    /* background-color: #F3AF34; */
+}
+.slider-dot {
+    margin-top: 100px; position: absolute ; bottom: 0;  left: 50%; transform: translate(-50%, -50%); display: flex; gap: 25px;
+}
+
+.arrow-left {
+    width: 0; 
+    height: 0; 
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-left: 18px solid hsla(0, 0%, 100%, 1);
+    display: inline-block;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(-180deg);
+    position: absolute;
+    top: 130px;
+    left:-25px;
+}
+
+.arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-left: 18px solid hsla(0, 0%, 100%, 1);
+    display: inline-block;
+    
+    position: absolute;
+    top: 130px;
+    right:-25px;
+}   
+
+.features{
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.3) 20%,
+        rgba(0, 0, 0, 0.3) 80%,
+        rgba(0, 0, 0, 1) 100%
+      ),
+      url("./assets/features.png");
+      /* padding: 100px; */
+      height: 960px;
+      height: 100%;
+      
+  
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      align-items: center;
+}
+
+.features > .container {
+    
+    width: 44%;
+    /* background-color: #F3AF34; */
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+
+.features > .container > div > h1, h3 {
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-weight: 400;
+    
+    text-transform: uppercase;
+}
+.features > .container > div > h1 {
+    font-size: 56px;
+    line-height: 70px;
+    
+
+}
+
+.features > .container > div > h3 {
+    font-size: 24px;
+    line-height: 25px;
+}
+
+.features-title {
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: hsla(36, 100%, 64%, 1);
+    line-height: 28px;
+    margin-bottom: 16px;
+}
+
+.features-list >li {
+    width: 75%;
+    margin: 30px 0;
+    /* background-color: #F3AF34; */
+}
+
+.requirements{
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.3) 20%,
+      rgba(0, 0, 0, 0.3) 80%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("./assets/requirements.png");
+    /* padding: 100px; */
+    height: 960px;
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 120px;
+    /* align-items: center; */
+    
+}
+
+.requirements > h3 {
+    font-family: Arial;
+font-size: 14px;
+font-weight: 400;
+line-height: 16.1px;
+letter-spacing: 2px;
+text-align: left;
+
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.requirements > div > h1 {
+    font-family: Arial;
+font-size: 56px;
+font-weight: 400;
+line-height: 64.39px;
+letter-spacing: 3px;
+text-align: left;
+margin-bottom: 20px;
+}
+.list-requirement{
+    display: flex;
+    width: 550px;
+    /* background-color: #F3AF34; */
+    flex-wrap: wrap; 
+    
+}
+
+
+
+.list-requirement > * {
+   
+    border: 1px solid hsla(0, 0%, 59%, 1);
+    flex: 1 1 200px;
+   
+}
+
+.list-requirement > div {
+    
+    padding-top:10px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+}
+
+.list-requirement > div > * {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+.list-requirement > div > h4 {
+  
+    color: hsla(36, 100%, 64%, 1);
+    line-height: 28px;
+    font-weight: 400;
+    margin-bottom: 2px;
+    font-size: 24px;
+
+}
+
+.quotes{
+    /* background-color: rgb(37, 46, 53); */
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.3) 20%,
+      rgba(0, 0, 0, 0.3) 80%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("./assets/quotes.jpg");
+    /* padding: 100px; */
+    height: 960px;
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 120px;
+    align-items: center;
+    
+}
+
+.quotes > .container {
+    
+    width: 1024px;
+    display: flex;
+
+}
+
+.quotes > .container > div {
+    flex:1 ;
+    justify-content: center;
+    /* padding: 0 120px; */
+    align-items: center;
+}
+
+.quotes > .container > div.list-card {
+    align-items: flex-start;
+}
+
+.top-scorer{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    /* padding: 0 0px; */
+    max-width: 100%;
+    padding: 0 10;
+    
+}
+
+.top-scorer > .container {
+    width: 80%;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.top-scorer > .container > h1 {
+    font-family: Arial;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 64.39px;
+    letter-spacing: 3px;
+    text-align: left;
+
+}
+
+.top-scorer > .container > p {
+   
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+
+
+}
+
+.top-scorer > .container > button {
+    align-self: flex-start;
+    width: 260.36px;
+    height: 60px;
+    top: 522.7px;
+    left: 117px;
+    gap: 0px;
+    opacity: 0px;
+    background: linear-gradient(194.68deg, #FFB548 11.27%, #F3AF34 90.4%);
+    border-radius: 4px;
+    border: none;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21.79px;
+    text-align: center;
+
+
+}
+
+.list-card {
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    
+}
+.list-card .end{
+    align-self: self-end;
+  }
+
+.list-card .center{
+    align-self: center;
+    margin-left: 15px;
+}
+
+.card {
+    background: hsla(0, 0%, 100%, 0.08);
+    padding: 15px;
+    width: 360px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.card-header-img {
+    background-color: #F3AF34;
+    border-radius: 50%;
+    position: relative;
+    width: 61.92px;
+height: 61.83px;
+
+}
+
+.card-header-img> img {
+    /* background-color: aquamarine; */
+    width: 61.92px;
+    height: 61.83px;
+    border-radius: 50%;
+    opacity: 0px;
+    position: absolute;
+    top:-3px;
+    left: -5px;
+    /* object-fit: scale-down; */
+
+
+}
+
+.card-header-profile {
+    padding: 0 15px;
+    flex-grow: 4; /* default 0 */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px;
+}
+
+.card-header-profile > h1 {
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-align: left;
+    color:  hsla(36, 100%, 64%, 1);
+
+}
+
+.card-header-profile > span {  
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: justify;
+    color: hsla(0, 0%, 100%, 1);
+    opacity: 50%;
+}
+
+.card-header > img {
+    align-self:self-start;
+    margin-top: 12px;
+}
+
+.card-comment {
+    
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24.51px;
+    text-align: left;
+    color: hsla(0, 0%, 100%, 1);
+
+}
+
+.card-date {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.07px;
+    text-align: left;
+    opacity: 50%;
+
+}
