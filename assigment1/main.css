@@ -326,6 +326,40 @@ header {
     line-height: 25px;
 }
 
+.features-list > li:before{
+    background-color: hsla(0, 0%, 100%, 1);
+    width: 2px;
+    content: '';
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 7.55px;
+}
+
+.features-list > ul {
+    list-style-type: none;
+}
+
+.features-list > li {
+         /* You need to turn on relative positioning so the line is placed relative to the item rather than absolutely on the page */
+        position: relative;
+      
+        /* Use padding to space things out rather than margins as the line would get broken up otherwise */
+        margin: 0;
+        padding-bottom: 1em;
+        padding-left: 20px;
+      
+}
+
+.features-list > li:first-child:before { top: 15px;  }
+.features-list > li:last-child:before { height: 0%; }
+.features-list > li:nth-child(2)::before { height: 7%; }
+    
+/* Styles for the SVG bullet points */
+.bullet { margin-left: -20px; width: 20px; fill: hsla(0, 0%, 100%, 1); float: left; padding-right: 15px ; padding-top: 3px;}
+
+
+
 .features-title {
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
@@ -337,9 +371,19 @@ header {
 
 .features-list >li {
     width: 75%;
-    margin: 30px 0;
+    
+    /* margin: 30px 0; */
     /* background-color: #F3AF34; */
 }
+
+.features-list >li > p{
+    margin-left: 9px;
+    line-height: 25px;
+    
+    /* margin: 30px 0; */
+    /* background-color: #F3AF34; */
+}
+
 
 .requirements{
     background: linear-gradient(
@@ -624,6 +668,219 @@ height: 61.83px;
 }
 
 .card-date {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.07px;
+    text-align: left;
+    opacity: 50%;
+
+}
+
+
+.newsletter{
+    /* background-color: rgb(37, 46, 53); */
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.3) 20%,
+      rgba(0, 0, 0, 0.3) 80%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url("./assets/newsletter.jpg");
+    padding-top: 100px;
+    /* margin-top: 100px; */
+    
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 0 120px; */
+    align-items: center;
+    
+}
+
+.newsletter-section {
+    width: 1024px;
+    /* margin-top: 10px; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newsletter-img {
+    /* padding:25px 0px; */
+    flex-basis: 39%;
+    display: flex;
+   
+    justify-content: center;
+
+}
+.newsletter-content {
+    padding: 5px;
+    flex-basis: 59%;
+    display: flex;
+    
+    flex-direction: column;
+    gap: 20px;
+   
+}
+
+.newsletter-content > h3 {
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 27.6px;
+    letter-spacing: 2px;
+    text-align: left;
+
+}
+
+.newsletter-content > h1 {
+    font-family: Arial;
+    font-size: 65px;
+    font-weight: 400;
+    line-height: 74.74px;
+    letter-spacing: 3px;
+    text-align: left;
+}
+
+.newsletter-content > p {
+    font-family: Open Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+
+}
+
+.newsletter-content > .action {
+    /* background-color: #F3AF34; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    height: 200px;
+    /* align-content: center; */
+   
+}   
+
+
+    
+.newsletter-content >  .action > button {
+    background-image: linear-gradient(hsla(36, 100%, 64%, 1),hsla(39, 89%, 58%, 1));
+    color: hsla(40, 6%, 10%, 1);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 21.79px;
+    text-align: center;
+    border: none;
+    flex-basis: 41%;
+    height: 53px;
+    border-radius: 5px;
+  
+}
+
+
+
+.input_box{
+   
+    width: 53%;
+    margin-right: 20px;
+    /* margin-top: 30px; */
+    position: relative;
+}
+.input_box input{
+    border-radius: 7px;
+    background-color: hsla(0, 0%, 100%, 0.08);
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding-top: 25px ;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    color: hsla(36, 100%, 64%, 1);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24.51px;
+    text-align: left;
+
+}
+.input_box label{
+    position: absolute;
+    left: 15px;
+    font-size: 25px;
+    top: 5px;
+    pointer-events: none;
+    transition: 0.2s;
+   
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.07px;
+    text-align: left;
+
+}
+
+.footer {
+    margin-top: 70px;
+    margin-bottom: 27px;
+    width: 1024px;
+}
+
+.menu-logo {
+    margin-left: auto;
+    display: flex;
+   
+    text-transform: uppercase;
+   gap: 75px;
+    justify-content: flex-end;
+    /* background-color: #F3AF34; */
+}
+
+.menu-logo > ul {
+    
+    font-size: 12px;
+    line-height: 16.34px;
+    letter-spacing: 0.1em;
+    text-align: left;
+
+    display: inline-flex;
+    gap: 50px;
+}
+
+.credit-link {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: aqua; */
+}
+
+.credit-link > div {
+    /* background-color: #F3AF34; */
+    display: inline-flex;
+    gap: 10px;
+ 
+}
+    
+
+.credit-link > div > a{
+    margin-top: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16.34px;
+    letter-spacing: 0.1em;
+    text-align: right;
+    color: hsla(0, 0%, 100%, 1);
+    text-transform: uppercase;
+    text-decoration: none;
+    
+}
+
+.copyright {
+    
     font-size: 14px;
     font-weight: 400;
     line-height: 19.07px;
