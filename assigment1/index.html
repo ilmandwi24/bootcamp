@@ -41,7 +41,9 @@
                         </div>
                         <!-- menu mobile -->
                          <div
+                         id="menu-mobile"
                           class="menu-mobile"
+                          style="display: none;"
                          > 
                             <div >
                                 <ul class="ul-mobile">
@@ -61,32 +63,34 @@
                                 </button>
                             </div>
                          </div>
-                        <div class="menu-icon" style="color:white;">
-                            <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
-                            <!-- <i class="fa fa-times fa-2x" aria-hidden="true"></i> -->
+                        <div id="menu-icon" class="menu-icon" style="color:white;">
+                            <i id="fa-bars" class="fa fa-bars fa-2x" aria-hidden="true"></i>
+                            <i id="fa-times" class="fa fa-times fa-2x hidden" aria-hidden="true"></i>
 
 
                         </div>
                     
                 </nav>
             </header>
-        <h1 class="content-center">Play traditional game</h1>
-        <h3 class="content-center">Experience new traditional game play</h3>
-        <button class="btn-playnow">PLAY NOW</button>
-        <button class="btn-story">The Story</button>
-        
+            <div class="main-content">
+                <h1 class="content-center">Play traditional game</h1>
+                <h3 class="content-center">Experience new traditional game play</h3>
+                <button class="btn-playnow">PLAY NOW</button>
+               
+            </div>
+            <button class="btn-story">The Story</button>
     </section>
     <section class="about-gallery">
         <div class="container">
             <div class="gallery-title">
                 <h3>what's so special ?</h3>
-                <h1>The Game</h1>
+                <h1>The Games</h1>
             </div>
             <div class="display-gallery">
                
-                <img src="./assets/rockpaperstrategy-1600.jpg" alt="" width="720px">
+                <img src="./assets/rockpaperstrategy-1600.jpg" alt="" class="img-responsive">
                 <div class="slider-dot">
-                    <span class="dot"></span>
+                    <span class="dot full-dot"></span>
                     <span class="dot"></span>
                     <span class="dot"></span>
                     <span class="dot"></span>
@@ -225,23 +229,25 @@
     <section class="newsletter">
         <div class="newsletter-section">
             <div class="newsletter-img">
-                <img src="./assets/newsletter-img.png" alt="" width="220px">
+                <img src="./assets/newsletter-img.png" alt="" width="412.35px">
             </div>
             <div class="newsletter-content">
                
-                    <h3>Want to stay in touch?</h3>
-                    <h1>NEWSLETTER SUBSCRIBE </h1>
-                    <p>
-                        In order to start receiving our news, all you have to do is enter your email address. Everything else will be taken care of by us. We will send you emails containing information about game. We don’t spam.
-                    </p>
-                    <div class="action">
+                    <div class="container">
+                        <h3>Want to stay in touch?</h3>
+                        <h1>NEWSLETTER SUBSCRIBE </h1>
+                        <p>
+                            In order to start receiving our news, all you have to do is enter your email address. Everything else will be taken care of by us. We will send you emails containing information about game. We don’t spam.
+                        </p>
+                        <div class="action">
                       
-                        <div class="input_box">
-                            <input type="text" value="youremail@binar.co,id">
-                            <label>Your email address</label>
-                        </div>
+                            <div class="input_box">
+                                <input type="text" value="youremail@binar.co,id">
+                                <label>Your email address</label>
+                            </div>
                       
                         <button class="button-newsletter">Subscribe now</button>
+                    </div>
                     </div>
                
             </div>
@@ -286,5 +292,6 @@
             </div>
         </div>
     </section> 
+    <script src="main.js"></script>
 </body>
 </html>
