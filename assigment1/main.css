@@ -14,6 +14,8 @@ body {
     font-weight: 400;
     font-size: 18px;
     color: white;
+
+    min-height: 100vh;  
 }
 
 .navigation {
@@ -49,7 +51,7 @@ h3 {
 /* START FIGMA */
 
 .main-screen {
-    height: 960px;
+ 
     row-gap: 2.1rem;
     background: linear-gradient(
       to bottom,
@@ -888,3 +890,62 @@ height: 61.83px;
     opacity: 50%;
 
 }
+
+.menu-mobile {
+    display: none;
+    
+}
+
+.menu-icon {
+    display: none;
+}
+
+
+/* MOBILE RESPONSIVE */
+@media only screen and (max-width: 768px) {
+    body {
+      background-color: lightblue;
+      width: 100%;
+    }
+
+    .menu, .action {
+        display: none;
+    }
+
+    header {
+        padding:0 50px;
+        position: relative;
+    }
+
+
+    .menu-mobile {
+        /* background-color: blue; */
+        background-color: hsla(0, 0%, 0%, 0.9);
+        border: 1px white solid;
+        position: absolute;
+        top: 100%;
+        text-align: end;
+    
+        padding : 15px;
+        left: 65%;
+        width: 25%;
+        /* display: flex; */
+        display: none;
+        flex-direction: column;
+    }
+
+    .ul-mobile{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+    
+
+  
+  
+  } 
